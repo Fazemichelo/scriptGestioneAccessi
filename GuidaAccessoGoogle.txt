@@ -1,0 +1,31 @@
+-Step 0: Scaricare il Firebase SDK da qua: "https://firebase.google.com/download/unity?hl=it", unzip, importare in unity il package "FirebaseAuth.unitypackage"
+
+-Step 1: Creare un nuovo progetto su Firebase (https://console.firebase.google.com/), utilizzare il "default account for Firebase" quando chiesto durante la creazione
+
+-Step 2: Nella pagina del progetto appena creato vi sarà una scritta del tipo "Get started by adding Firebase to your app", selezionare l'icona di unity, si aprirà un form con varie scelte
+
+-Step 3: Selezionare la casella "Register as Android App", inserire il nome dell'Android Package: 
+	-Step 3.1: selezionare la piattaforma Android in unity (File > Build Settings > Android > switch platform)
+	-Step 3.2: il nome del Android Package si trova in "Edit > Project Settings > Player > tab di Andorid > Other 	settings
+
+-Step 4: scaricare il file "google-services.json" quando richiesto e aggiungerlo negli asset del progetto, NB deve essere nominato esattamente "google-services.json", togliere scritte in eccesso dal nome
+
+-Step 5: Ignorare il passaggio di download del firebase SDK, è gia stato fatto (Step 0)
+
+-Step 6: Una volta terminata la creazione del progetto apparirà la schermata per la gestione di esso, nella finiestrella a sinistra selezionare "tutti i prodotti" > "authentication"
+ 
+-Step 7: abilitare l'autenticazione google sotto il menu "sign-in method"
+
+-Step 8: creare impronte digitali, per fare ciò è necessario eseguire il seguente comando dal cmd nella directory della cartella bin del jdk: keytool -list -v -alias "aliasDaUtilizzare" -keystore "PerscorsoDelKeystore"
+
+-Step 9: inserire le due impronte digitali generate (SHA-1, SHA-256) nel progetto firebase, selezionando impostazioni progetto nel menu a tendina a sinistra (impostazioni progetto> generali> le tue app> aggiungi impronta digitale
+
+-Step 10: scaricare il package di Google Sign In via git da questo link "https://github.com/googlesamples/google-signin-unity/releases/tag/v1.0.4" e importarlo nel progetto unity
+
+-Step 11: creare un bottone per il login google
+
+-Step 12: scaricare lo script per la gestione dell'accesso da qua "https://github.com/Fazemichelo/scriptGestioneAccessi"
+
+-Step 13: creare un oggetto vuoto che contenga lo script
+
+-Step 14: creare un bottone che al click esegua la funzione GoogleSignInClick dallo script dell'oggetto
