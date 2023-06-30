@@ -1,7 +1,7 @@
 using Universal.UniversalSDK;
 
-public class LoginController : MonoBehaviour {
-    public void OnClickExampleLogin()
+public class yourObjNameHere : MonoBehaviour {
+    public void SignInGoogle()
     {        
         UniversalSDK.Ins.Login(LoginType.GOOGLE,
             result =>
